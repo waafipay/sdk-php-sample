@@ -1,5 +1,5 @@
 <?php 
-require_once __DIR__ . '/waafipaysdk/vendor/autoload.php';
+require_once __DIR__ . '/sdk-php-main/vendor/autoload.php';
 define('PROJECT','waafipaysdk');
 
 use waafipay\pg\constants\LibraryConstants;
@@ -19,9 +19,9 @@ use waafipay\pg\process\Payment;
 
 // initialization
 
-$merchantUid = "M0910002";
-$apiUserId = "1000011";
-$apiKey = "HPP-554757642";
+$merchantUid = "M0912255";
+$apiUserId = "1000238";
+$apiKey = "HPP-961814494";
 
 $environment = LibraryConstants::STAGING_ENVIRONMENT;
 MerchantProperties::initialize($environment, $apiUserId, $merchantUid, $apiKey);
