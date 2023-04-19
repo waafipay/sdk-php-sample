@@ -19,9 +19,9 @@ use waafipay\pg\process\Payment;
 
 // initialization
 
-$merchantUid = "M0910002";
-$apiUserId = "1000011";
-$apiKey = "HPP-554757642";
+$merchantUid = "M0912255";
+$apiUserId = "1000312";
+$apiKey = "API-669892958AHX";
 
 $environment = LibraryConstants::STAGING_ENVIRONMENT;
 MerchantProperties::initialize($environment, $apiUserId, $merchantUid, $apiKey);
@@ -33,7 +33,7 @@ $requestId = "R17100517154423";
 
 $payerInfo = new PayerInfo(); 
 $payerInfo->setaccountNo("252615515000");
-$payerInfo->setaccountPwd("123");
+$payerInfo->setaccountPwd("1212");
 $payerInfo->setaccountExpDate("1228");
 $payerInfo->setaccountHolder("Nad Test");
 
@@ -55,6 +55,8 @@ $paymentDetailBuilder = new PaymentDetailBuilder($channelId, $methodId, $request
 
 
 $paymentDetail = $paymentDetailBuilder->build();
+
+
 
 $response = Payment::createTxn($paymentDetail);
 
